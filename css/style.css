@@ -4,15 +4,23 @@
     box-sizing: border-box;
 }
 
+/*TAG GENERALI*/
 body{
     background-color: rgb(173, 230, 240);
 }
 
 footer{
-    height: 150px;
-    background-color: blue;
-    margin-top: 30px;
+    text-align: center;
+    padding:10px 0;
 }
+
+p{
+    color:black;
+    font-size: 10px;
+    font-weight: bold;
+}
+
+/*HEADER*/
 #container-logo{
     height:100px;
     margin:0 auto;
@@ -22,17 +30,22 @@ footer{
     font-weight:bold;
     color: white;
     padding-top:20px;
+    font-family: 'Carter One', cursive;
 }
 
+/*CONTENITORE CARTE*/
 .container-cards{
     margin:0 auto;
     width:70%;
     text-align: center;;
 }
+
+/* CLASSE PER STRUTTURA CARTE*/
 .structure-cards{
     height:250px;
     width: 180px;
     display: inline-block;
+    vertical-align: middle;
     border:1px solid black;
     border-radius: 10px;
     margin: 10px 5px;
@@ -42,18 +55,62 @@ footer{
     position:relative;
 }
 
+/*CLASSE PER IMMAGINE VISIBILE AIR BALLON*/
 .img-air-ballon{
     background-image: url(../img/noun_air_balloon_3134741.png);
     background-size: contain;  
     background-repeat: no-repeat;
     background-position: center;  
 }
+
+/*CLASSE PER IMMAGINE VISIBILE SUBMARINE*/
+.img-submarine{
+    background-image: url(../img/noun_Tractor_3134797.png);
+    background-size: contain;  
+    background-repeat: no-repeat;
+    background-position: center;  
+}
+
+/* CLASSI COLORI PER TESTO IMMAGINI*/
+.color-orange>span{
+    color:orange;
+}
+
+/*TESTO CARTE STRUTTURA GENERALE*/
 .text-cards{
     position:absolute;
     top:200px;
     left:40px;
     font-size: 25px;
-    color:violet;
+    color:rgb(236, 159, 16);
     font-weight: bold;
     display: none;
+    font-family: 'Carter One', cursive;
+}
+
+/*TESTO VISIBILE PER CASELLE VISIBILI*/
+.text-visible{
+    position:absolute;
+    top:200px;
+    left:40px;
+    font-size: 25px;
+    color:orange;
+    font-weight: bold;
+    display: inline-block;
+    font-family: 'Carter One', cursive;
+}
+
+/*REGOLE PER HOVER CARTE*/
+.structure-cards>img{
+    max-width: 100%;
+    display: none;
+}
+
+.structure-cards:hover .text-cards,
+.structure-cards:hover img{
+    display: block;
+}
+
+.structure-cards:hover{
+    background-image: none;
 }
